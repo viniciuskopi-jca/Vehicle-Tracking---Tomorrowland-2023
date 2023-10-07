@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tomorrowland - Localização dos Veículos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0-beta.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <!-- Logo do evento centralizado -->
+    <div id="logo">
+        <img src="{{ url_for('static', filename='icons/tomorrowland.svg') }}" alt="Tomorrowland Logo">
+    </div>
+
+    <!-- Mapa -->
+    <div id="map"></div>
+
+    <!-- Tabela com os dados -->
+    <div class="table-container">
+        <table id="vehicle-table">
+            <thead>
+                <tr>
+                    <th>Prefixo</th>
+                    <th>Placa</th>
+                    <th>Endereco</th>
+                    <th>Última Atualização</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados da tabela serão preenchidos dinamicamente com JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0-beta.1/mapbox-gl.js'></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+    <!-- Adicione este código no final do corpo da página -->
+    <p id="last-updated"></p>
+</body>
+</html>

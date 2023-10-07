@@ -1,0 +1,147 @@
+.table-container {
+  max-height: 400px; /* Ajuste a altura máxima conforme necessário */
+  overflow: auto;
+}
+
+/* Adicione isso ao seu CSS para estilizar a tabela em telas menores */
+@media (max-width: 768px) {
+  /* Estilos específicos para telas menores */
+  #vehicle-table th,
+  #vehicle-table td {
+      font-size: 14px;
+      padding: 6px;
+  }
+}
+
+
+#last-updated {
+    font-size: 12px;
+    text-align: center;
+    color: #151515;
+}
+
+
+/* Estilo para a tabela */
+#vehicle-table {
+  font-size: smaller;
+  width: 100%;
+  max-width: 600px; /* Largura máxima da tabela */
+  border-collapse: collapse;
+  margin: 20px auto; /* Centralizar horizontalmente a tabela */
+  border-radius: 10px; /* Cantos arredondados da tabela */
+  
+}
+
+/* Estilo para o cabeçalho da tabela */
+#vehicle-table th {
+  background-color: #121212;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #535353; /* Adicionar uma borda branca */
+}
+
+/* Estilo para as linhas de dados da tabela */
+#vehicle-table td {
+  color: white;
+  padding: 8px;
+  border-bottom: 1px solid #121212;
+  border: 1px solid #535353; /* Adicionar uma borda branca */
+}
+
+/* Estilo para as células de dados da primeira coluna (Prefixo) */
+#vehicle-table td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Estilo para as células de dados da última coluna (Longitude) */
+#vehicle-table td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Estilo para as células de dados da tabela com largura dinâmica */
+#vehicle-table td {
+  white-space: nowrap; /* Evitar que o texto quebre em várias linhas */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adicionar "..." se o texto for muito longo */
+}
+
+/* Definir a largura mínima das células com base no conteúdo mais longo */
+#vehicle-table td:nth-child(1) {
+  min-width: 50px; /* Largura mínima da primeira coluna */
+}
+
+#vehicle-table td:nth-child(2) {
+  min-width: 80px; /* Largura mínima da segunda coluna */
+}
+
+#vehicle-table td:nth-child(3) {
+  min-width: 140px; /* Largura mínima da terceira coluna */
+}
+
+#vehicle-table td:nth-child(4) {
+  min-width: 90px; /* Largura mínima da quarta coluna */
+}
+
+#vehicle-table td:nth-child(5) {
+  min-width: 90px; /* Largura mínima da quinta coluna */
+}
+
+
+
+/* Defina o estilo do mapa */
+#logo {
+  width: 45px;
+  height: auto;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Defina o estilo do mapa */
+#map {
+  border-radius: 15px;
+  width: 98%;
+  height: 600px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Defina um estilo básico para o corpo da página */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+}
+
+/* Estilo para o título da página */
+h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Estilo para os marcadores do mapa */
+.mapboxgl-popup {
+  max-width: 200px;
+  font-family: Arial, sans-serif;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+}
+
+/* Estilo para os ícones personalizados dos marcadores */
+.mapboxgl-marker {
+  width: 30px;
+  height: 30px;
+  /*background-image: url('/static/icons/tomorrowland.svg');*/
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
